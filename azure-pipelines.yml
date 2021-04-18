@@ -22,12 +22,12 @@ stages:
     - task: CmdLine@2
       displayName: "Install Newman Runner"
       inputs:
-        script: sudo npm install -g newman
+        script: 'sudo npm install -g newman'
         workingDirectory: $(System.DefaultWorkingDirectory)
     - task: CmdLine@2
       displayName: "Test collection"
       continueOnError: true
       inputs:
-        script: newman run starterapis.json'
-        workingDirectory: $(System.DefaultWorkingDirectory)
+        script: 'newman run starterapis.json'
+        workingDirectory: 'starter-code/automatedtesting/postman'
 
